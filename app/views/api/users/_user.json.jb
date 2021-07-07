@@ -1,0 +1,8 @@
+{
+  id: user.id,
+  username: user.username,
+  email: user.email,
+  current_location: user.current_location,
+  bio: user.bio,
+  image_url: user.image_url
+}
