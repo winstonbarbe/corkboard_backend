@@ -1,4 +1,11 @@
 class Api::UsersController < ApplicationController
+  before_action :authenticate_user
+
+  def index
+    @users = User.all
+    render "index.json.jb", status: 200
+  end
+
   def create
     user = User.new(
       name: params[:name],
@@ -12,5 +19,31 @@ class Api::UsersController < ApplicationController
     else
       render json: { errors: user.errors.full_messages }, status: :bad_request
     end
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render "show.json.jb", status: 200
+  end
+  
+  def update
+    @user = current_user
+    @user.name = params[:name] || @user.name
+    @user.username = params[:username] || @user.username
+    @user.email = params[:email] || @user.email
+    @user.bio = params[:bio] || @user.bio
+    @user.current_location = params[:current_location] || @user.current_location
+    @user.image_url = params[:image_url] || @user.image_url
+    @user.active = params[:active] || @user.active
+    if @user.save
+      render "show.json.jb", status: 200
+    else
+      render json: { errors: @user.errors }, status: 400
+    end
+  end
+
+  def destroy
+    current_user.delete
+    render json: { message: "This user has been deleted" }, status: 201
   end
 end
