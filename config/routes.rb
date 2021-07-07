@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   namespace :api do
-    post "/users" => "users#create"
+    resources :users, :sessions, :connections, :messages
   end
 end
