@@ -1,8 +1,20 @@
 {
   pending_connections: @pending_connections.map do |connection|
-    render partial: "connection.json.jb", locals: {connection: connection}
+    current_connection = render partial: "connection.json.jb", locals: { connection: connection }
+    sender = render partial: "api/users/user.json.jb", locals: { user: connection.sender }
+    current_connection[:sender] = sender
+    current_connection
   end,
   accepted_connections: @accepted_connections.map do |connection|
-    render partial: "connection.json.jb", locals: {connection: connection}
+    current_connection = render partial: "connection.json.jb", locals: { connection: connection }
+    message  = connection.messages.last
+    user = render partial: "/api/users/user.json.jb", locals: { user: message.user }
+    current_connection[:message] = {
+      id: message.id,
+      body: message.body,
+      user: user,
+      sent: message.created_at
+    }
+    current_connection
   end
 }
