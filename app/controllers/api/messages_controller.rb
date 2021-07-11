@@ -9,4 +9,11 @@ class Api::MessagesController < ApplicationController
       render json: {message: @message}
     end
   end
+
+  def index
+    @message = Message.all
+    render json: {messages: @message}
+  end
+
+
 end
