@@ -1,0 +1,8 @@
+{
+  pending_connections: @pending_connections.map do |connection|
+    render partial: "connection.json.jb", locals: {connection: connection}
+  end,
+  accepted_connections: @accepted_connections.map do |connection|
+    render partial: "connection.json.jb", locals: {connection: connection}
+  end
+}
