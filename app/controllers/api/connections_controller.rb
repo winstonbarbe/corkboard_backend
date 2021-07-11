@@ -4,4 +4,9 @@ class Api::ConnectionsController < ApplicationController
     @accepted_connections = current_user.accepted_connections
     render "index.json.jb"
   end
+
+  def show
+    @connection = current_user.connections.find_by(id: params[:id])
+    render "show.json.jb"
+  end
 end

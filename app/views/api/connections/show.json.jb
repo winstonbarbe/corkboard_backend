@@ -1,0 +1,2 @@
+render partial: "connection.json.jb", locals: { connection: @connection }
+
