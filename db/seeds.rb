@@ -188,35 +188,36 @@ Connection.create!([
 ])
 
 Message.create!([
+  # Converstation Between User 1 and User 2
   {
     connection_id: 1, 
     user_id: 1, 
     body: "God didn't make little green apples", 
-    read: false
+    read: true
   },
   {
     connection_id: 1, 
     user_id: 2, 
     body: "And it don't rain in Indianapolis in the summertime", 
-    read: false
+    read: true
   },
   {
     connection_id: 1, 
     user_id: 1, 
     body: "And if that's not lovin' me", 
-    read: false
+    read: true
   },
   {
     connection_id: 1, 
     user_id: 2, 
     body: "I think about her face aglow and ease my mind", 
-    read: false
+    read: true
   },
   {
     connection_id: 1, 
     user_id: 1, 
     body: "Puppy dogs, autumn leaves 'n' BB guns", 
-    read: false
+    read: true
   },
   {
     connection_id: 1, 
@@ -224,36 +225,118 @@ Message.create!([
     body: "God didn't make little green apples", 
     read: false
   },
+  # / End Conversation with User 1 and User 2
+
+  # Conversation with User 2 and User 6
   {
     connection_id: 10 , 
-    user_id: 2, 
-    body: "And it don't rain in Indianapolis in the summertime", 
-    read: false
+    user_id: 6, 
+    body: "Baby it's gonna take a little bit longer for me to ever get you off of my mind", 
+    read: true
   },
   {
     connection_id: 10 , 
     user_id: 2, 
-    body: "And it don't rain in Indianapolis in the summertime", 
-    read: false
+    body: "Baby it's gonna take a little bit longer cause I've been lovin' you a long long time", 
+    read: true
   },
   {
     connection_id: 10 , 
     user_id: 2, 
-    body: "And it don't rain in Indianapolis in the summertime", 
-    read: false
+    body: "People try to tell me that it won't be long till I won't even miss you anymore", 
+    read: true
   },
   {
     connection_id: 10 , 
     user_id: 2, 
-    body: "And it don't rain in Indianapolis in the summertime", 
-    read: false
+    body: "But I can tell them it must be something mighty wrong every day I want you even more", 
+    read: true
+  },
+  # / End Conversation with User 6 and User 2
+
+  # Conversation with User 7 and User 1
+  {
+    connection_id: 6, 
+    user_id: 7, 
+    body: "Hello", 
+    read: true
   },
   {
-    connection_id: 10 , 
-    user_id: 2, 
-    body: "And it don't rain in Indianapolis in the summertime", 
+    connection_id: 6, 
+    user_id: 1, 
+    body: "Hi", 
+    read: true
+  },
+  {
+    connection_id: 6, 
+    user_id: 7, 
+    body: "Whatsup", 
     read: false
   },
-  
+  # / End Conversation with User 7 and User 1
+
+  # Conversation with User 5 and User 2
+  {
+    connection_id: 11, 
+    user_id: 5, 
+    body: "Hello", 
+    read: true
+  },
+  {
+    connection_id: 11, 
+    user_id: 2, 
+    body: "Hi", 
+    read: true
+  },
+  {
+    connection_id: 11, 
+    user_id: 5, 
+    body: "Whatsup", 
+    read: false
+  },
+  # / End Conversation with User 5 and User 2
+
+  # Conversation with User 6 and User 3
+  {
+    connection_id: 12, 
+    user_id: 3, 
+    body: "Hello", 
+    read: true
+  },
+  {
+    connection_id: 12, 
+    user_id: 6, 
+    body: "Hi", 
+    read: true
+  },
+  {
+    connection_id: 12, 
+    user_id: 6, 
+    body: "Whatsup", 
+    read: false
+  },
+  # / End Conversation with User 6 and User 3
+
+  # Conversation with User 5 and User 3
+  {
+    connection_id: 14, 
+    user_id: 5, 
+    body: "Hello", 
+    read: true
+  },
+  {
+    connection_id: 14, 
+    user_id: 5, 
+    body: "Hi", 
+    read: true
+  },
+  {
+    connection_id: 14, 
+    user_id: 5, 
+    body: "Whatsup", 
+    read: true
+  },
+  # / End Conversation with User 5 and User 3
+
  
 ])
