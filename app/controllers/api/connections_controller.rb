@@ -7,13 +7,11 @@ class Api::ConnectionsController < ApplicationController
   end
 
   def create
-    # Need to make it so default of status is set to zero
     # Need to make sure duplicates can't happen
     # Potentially we need to include the other users information when creating
     @connection = Connection.new(
       sender_id: current_user.id,
       recipient_id: params[:recipient_id],
-      status: 0
     )
     if @connection.save
       render "show.json.jb", status: 201
