@@ -44,7 +44,7 @@ User.create!([
     name: "Miley Cyrus", 
     image_url: "profile_pic.jpg", 
     bio: "Best of both worlds..", 
-    current_location: "Laws Angeles, CA", 
+    current_location: "Los Angeles, CA", 
     active: true
   },
   {
