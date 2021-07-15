@@ -1,2 +1,19 @@
-render partial: "connection.json.jb", locals: { connection: @connection }
+connection = render partial: "connection.json.jb", locals: { connection: @connection }
+
+current_user_data = render partial: "/api/users/user.json.jb", locals: { user: current_user }
+connection_profile = current_user.id == @connection.sender_id ? @connection.recipient : @connection.sender
+messages = @connection.messages.map do |message|
+  {
+    id: message.id,
+    body: message.body,
+    read: message.read,
+    sent: message.created_at
+  }
+end
+
+connection[:current_user_data] = current_user_data  
+connection[:connection_profile] = render partial: "/api/users/user.json.jb", locals: { user: connection_profile }
+connection[:messages] = messages
+
+connection
 
