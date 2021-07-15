@@ -3,11 +3,13 @@ connection = render partial: "connection.json.jb", locals: { connection: @connec
 current_user_data = render partial: "/api/users/user.json.jb", locals: { user: current_user }
 connection_profile = current_user.id == @connection.sender_id ? @connection.recipient : @connection.sender
 messages = @connection.messages.map do |message|
+  user = render partial: "/api/users/user.json.jb", locals: { user: message.user}
   {
     id: message.id,
     body: message.body,
     read: message.read,
-    sent: message.created_at
+    sent: message.created_at,
+    user: user
   }
 end
 
