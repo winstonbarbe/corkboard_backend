@@ -1,6 +1,7 @@
 {
   id: user.id,
   username: user.username,
+  name: user.name,
   email: user.email,
   current_location: user.current_location,
   bio: user.bio,
