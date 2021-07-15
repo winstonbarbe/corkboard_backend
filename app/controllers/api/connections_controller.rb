@@ -22,7 +22,6 @@ class Api::ConnectionsController < ApplicationController
 
   def show
     # Need to update this controller to include messages index
-    
     @connection = current_user.connections.find_by(id: params[:id])
     render "show.json.jb"
   end
