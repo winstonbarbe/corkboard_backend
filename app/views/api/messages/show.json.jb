@@ -1,0 +1,8 @@
+user = render partial: "/api/users/user.json.jb", locals: { user: @message.user }
+{
+  id: @message.id,
+  body: @message.body,
+  read: @message.read,
+  sent: @message.created_at,
+  user: user
+}

@@ -6,9 +6,15 @@ class Api::MessagesController < ApplicationController
       body: params[:body],
       read: false,
     )
-    if @message.save
-      render json: {message: @message}
-    end
+    @message.save
+
+    ActionCable.server.broadcast "messages_channel", {
+      id: @message.id,
+      name: @message.user.username,
+      body: @message.body,
+      sent: @message.created_at
+    }
+    render "show.json.jb"
   end
 
 end
