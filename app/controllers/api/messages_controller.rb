@@ -9,26 +9,12 @@ class Api::MessagesController < ApplicationController
     @message.save
 
     ActionCable.server.broadcast "messages_channel", {
-      {
-        id: @message.id,
-        body: @message.body,
-        read: @message.read,
-        sent: @message.created_at,
-        user: {
-          {
-            id: @message.user.id,
-            username: @message.user.username,
-            name: @message.user.name,
-            email: @message.user.email,
-            current_location: @message.user.current_location,
-            bio: @message.user.bio,
-            image_url: @message.user.image_url
-          }
-        }
-      }
+      id: @message.id,
+      name: @message.user.username,
+      body: @message.body,
+      sent: @message.created_at
     }
-    
-    render json: {message: @message}
+    render "show.json.jb"
   end
 
 end
