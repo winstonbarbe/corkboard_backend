@@ -3,8 +3,8 @@ class Api::UsersController < ApplicationController
 
   def index
     @users = current_user.potential_connections
-    render "index.json.jb", status: 200
     # render json: @users 
+    render "index.json.jb", status: 200
   end
 
   def create
