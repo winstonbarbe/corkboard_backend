@@ -12,7 +12,7 @@ User.create!([
     email: "jaywengrow@example.com", 
     password: "password",
     name: "Jay Wengrow", 
-    image_url: "image.jpg", 
+    image_url: "https://images.pexels.com/photos/3405555/pexels-photo-3405555.png?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "Sup!", 
     current_location: "Chi Town", 
     active: false
@@ -22,7 +22,7 @@ User.create!([
     email: "winstonbarbe@example.com", 
     password: "password",
     name: "Winston Barbe", 
-    image_url: "profile_pic.jpg", 
+    image_url: "https://images.pexels.com/photos/4588817/pexels-photo-4588817.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "Im steppin out on the town tonight!", 
     current_location: "Athens, GA", 
     active: true
@@ -32,7 +32,7 @@ User.create!([
     email: "comer@example.com", 
     password: "password",
     name: "Comer", 
-    image_url: "profile_pic.jpg", 
+    image_url: "https://images.pexels.com/photos/1933873/pexels-photo-1933873.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "Bark bark.... until dawn", 
     current_location: "Athens, GA", 
     active: false
@@ -42,7 +42,7 @@ User.create!([
     email: "mileycyrus@example.com", 
     password: "password",
     name: "Miley Cyrus", 
-    image_url: "profile_pic.jpg", 
+    image_url: "https://images.pexels.com/photos/4318392/pexels-photo-4318392.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "Best of both worlds..", 
     current_location: "Los Angeles, CA", 
     active: true
@@ -52,7 +52,7 @@ User.create!([
     email: "hunterpinksten@example.com", 
     password: "password",
     name: "Hunter Pinkston", 
-    image_url: "profile_pic.jpg", 
+    image_url: "https://images.pexels.com/photos/3656518/pexels-photo-3656518.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "Catch me outside..", 
     current_location: "Athens, GA", 
     active: false
@@ -62,7 +62,7 @@ User.create!([
     email: "timduncan@example.com", 
     password: "password",
     name: "Tim", 
-    image_url: "profile_pic.jpg", 
+    image_url: "https://images.pexels.com/photos/5273717/pexels-photo-5273717.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "A fugitive must be a rolling stone", 
     current_location: "Athens, GA", 
     active: true
@@ -72,7 +72,7 @@ User.create!([
     email: "robertagobert@example.com", 
     password: "password",
     name: "Roberta", 
-    image_url: "profile_pic.jpg", 
+    image_url: "https://images.pexels.com/photos/3867132/pexels-photo-3867132.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "I want to settle down, but they won't let me", 
     current_location: "Athens, GA", 
     active: false
@@ -82,7 +82,7 @@ User.create!([
     email: "lacey_ball@example.com", 
     password: "password",
     name: "Lacey", 
-    image_url: "profile_pic.jpg", 
+    image_url: "https://images.pexels.com/photos/3643797/pexels-photo-3643797.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "Down every road there's always one more city", 
     current_location: "Athens, GA", 
     active: true
@@ -92,7 +92,7 @@ User.create!([
     email: "kristi@example.com", 
     password: "password",
     name: "Kristi", 
-    image_url: "profile_pic.jpg", 
+    image_url: "https://images.pexels.com/photos/3748221/pexels-photo-3748221.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "I'm a hunted fugitive with just two ways: outrun the law or spend my life in jail", 
     current_location: "Athens, GA", 
     active: false
@@ -102,7 +102,7 @@ User.create!([
     email: "zach@example.com", 
     password: "password",
     name: "Zach", 
-    image_url: "profile_pic.jpg", 
+    image_url: "https://images.pexels.com/photos/4562685/pexels-photo-4562685.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500", 
     bio: "I'm on the run, the highway is my home", 
     current_location: "Athens, GA", 
     active: true
