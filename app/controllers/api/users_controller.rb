@@ -2,8 +2,9 @@ class Api::UsersController < ApplicationController
   before_action :authenticate_user, except: :create
 
   def index
-    @users = User.all
-    render "index.json.jb", status: 200
+    @users = current_user.potential_connections
+    # render "index.json.jb", status: 200
+    render json: @users 
   end
 
   def create
