@@ -1,19 +1,20 @@
 class User < ApplicationRecord
   has_secure_password
   validates :email, :username, presence: true, uniqueness: true
-  has_many :connections
   has_many :messages
 
+  ACTIVE_CONNECTION_STATUS = "1"
   def connections
+    binding.pry
     Connection.where("sender_id = ? OR recipient_id = ?", id, id)
   end
 
   def accepted_connections
-    connections.where("status = 1")
+    connections.where(status: ACTIVE_CONNECTION_STATUS)
   end
 
   def pending_connections
-    connections.where("status = ? AND recipient_id = ?", 0, id)
+    connections.where(status: 0, recipient_id: id)
   end
 
   def potential_connections
